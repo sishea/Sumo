@@ -1,5 +1,4 @@
-# Sumo Robots
-## Robot Basics 
+# Sumo Robot Basics 
 * *Sensors* - a device which detects or measures a physical property
   * Digital – reflectance / line sensors
   * Analog – distance sensor
@@ -10,14 +9,13 @@
 * *Actuators* - a device that converts an electrical control signal into mechanical motion
   * Drive motors; Buzzer
 
-## Code Overview
+# Code Overview
 The code is created with a *very* simple state machine and command queue. States and transitions are shown below.
 
+![State Machine](https://github.com/sishea/Sumo/blob/master/Images/StateMachine.png)
 **Trigger \[Guards\] / Activity**
 
-![State Machine](https://github.com/sishea/Sumo/blob/master/Images/StateMachine.png)
-
-### State Machine Code Snippet
+## State Machine Code Snippet
 ```C
 void checkStateTransition()
 {
@@ -46,7 +44,7 @@ void checkStateTransition()
 }
 ```
 
-### Command Queue Code Snippet
+## Command Queue Code Snippet
 
 **Commands \[Left Speed, Right Speed, Duration\]**
 
@@ -73,3 +71,7 @@ void survive()
   startExecutingCommands();
 }
 ```
+# Tips
+* Modify speed, time and distance limits in the parameters
+* Change the Trigger / Guard in the state transitions
+* Change the commands undertaken in the State Changed activities
